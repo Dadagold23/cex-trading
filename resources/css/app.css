@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer components {
+    .animated-card {
+        @apply transition duration-300 hover:-translate-y-1 hover:shadow-2xl;
+    }
+
+    .animated-button {
+        @apply transition duration-300 hover:-translate-y-0.5 hover:shadow-lg active:scale-95;
+    }
+
+    .glass-card {
+        @apply bg-white/10 backdrop-blur border border-white/10 shadow-2xl;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl font-bold text-slate-900;
+    }
+
+    .section-subtitle {
+        @apply text-gray-600 leading-8;
+    }
+
+    .dashboard-card {
+        @apply bg-white rounded-2xl shadow p-6 animated-card;
+    }
+
+    .dashboard-action {
+        @apply px-4 py-2 rounded-xl border hover:bg-gray-50 animated-button;
+    }
+
+    .dashboard-primary {
+        @apply px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 animated-button;
+    }
+
+    .dashboard-danger {
+        @apply px-4 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 animated-button;
+    }
+}
+@layer components {
+    .page-shell {
+        @apply max-w-7xl mx-auto;
+    }
+
+    .page-header {
+        @apply flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6;
+    }
+
+    .page-title {
+        @apply text-3xl font-bold;
+    }
+
+    .page-description {
+        @apply text-gray-500 mt-1;
+    }
+
+    .content-card {
+        @apply bg-white rounded-2xl shadow p-6 animated-card;
+    }
+
+    .form-input {
+        @apply w-full border rounded-xl px-4 py-3;
+    }
+
+    .form-label {
+        @apply block mb-2 font-medium;
+    }
+}
+
